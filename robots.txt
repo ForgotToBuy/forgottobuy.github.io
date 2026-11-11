@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://miseltwister.github.io/sitemap.xml
+Sitemap: https://forgottobuy.github.io/sitemap.xml

@@ -6,104 +6,334 @@
 <script>document.documentElement.className+=' js';</script>
 
 <title>Tomas — Systems &amp; Software Engineer</title>
-<meta name="description" content="I build the systems online communities run on: backend services, desktop tooling, and the control panels that go on top.">
-<link rel="canonical" href="https://miseltwister.github.io/">
-<meta name="theme-color" content="#070809">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23070809'/%3E%3Crect x='11' y='11' width='10' height='10' rx='2' fill='%23ffb043'/%3E%3C/svg%3E">
+<meta name="description" content="I build the systems online communities run on: backend services, desktop tools, and the control panels that go on top.">
+<link rel="canonical" href="https://forgottobuy.github.io/">
+<meta name="theme-color" content="#04060b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop stop-color='%233ef0b6'/%3E%3Cstop offset='.55' stop-color='%2338c6ff'/%3E%3Cstop offset='1' stop-color='%238f7dff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='16' fill='url(%23g)'/%3E%3Cpath d='M9 10h14v4h-5v9h-4v-9H9z' fill='%2304060b'/%3E%3C/svg%3E">
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://miseltwister.github.io/">
+<meta property="og:url" content="https://forgottobuy.github.io/">
 <meta property="og:title" content="Tomas — Systems &amp; Software Engineer">
-<meta property="og:description" content="I build the systems online communities run on: backend services, desktop tooling, and the control panels that go on top.">
-<meta property="og:image" content="https://miseltwister.github.io/images/og-preview.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:description" content="I build the systems online communities run on: backend services, desktop tools, and the control panels that go on top.">
+<meta property="og:image" content="https://forgottobuy.github.io/images/og-preview.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tomas — Systems &amp; Software Engineer">
-<meta name="twitter:description" content="I build the systems online communities run on: backend services, desktop tooling, and the control panels that go on top.">
-<meta name="twitter:image" content="https://miseltwister.github.io/images/og-preview.png">
+<meta name="twitter:image" content="https://forgottobuy.github.io/images/og-preview.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css?v=7">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Tomas",
-  "url": "https://miseltwister.github.io/",
+  "url": "https://forgottobuy.github.io/",
   "jobTitle": "Systems & Software Engineer",
   "email": "mailto:tomas.jorasen@polarixhosting.com",
   "sameAs": ["https://github.com/ForgotToBuy"],
-  "knowsAbout": ["Java", "Rust", "Laravel", "Vue.js", "Minecraft server development", "Application security"]
+  "knowsAbout": ["Java", "Rust", "Laravel", "Vue.js", "Game server development", "Application security"]
 }
 </script>
 </head>
-<body>
+<body id="top">
 
-<a class="skip-link" href="#work">Skip to work</a>
+<div class="backdrop" aria-hidden="true"><i></i><i></i><i></i></div>
+<canvas class="stars" aria-hidden="true"></canvas>
+
+<a class="skip-link" href="#main">Skip to content</a>
 
 <nav class="site-nav" aria-label="Main">
   <div class="wrap site-nav__inner">
-    <a class="wordmark" href="/">Tomas<span>.</span></a>
+    <a class="wordmark" href="#top"><span class="wordmark__mark">T</span>Tomas<span>.</span></a>
     <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#work">Work</a>
-      <a href="#stack">Stack</a>
-      <a href="https://github.com/ForgotToBuy" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a class="btn btn--ghost" href="mailto:tomas.jorasen@polarixhosting.com">Contact</a>
+      <a href="#route">Route</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn--ghost btn--small" href="#contact">Let's talk</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
-  <div class="glow hero__glow-a"></div>
-  <div class="glow hero__glow-b"></div>
-  <div class="wrap">
-    <div class="hero__intro">
-      <p class="eyebrow hero__eyebrow"><span class="status">Available for work</span></p>
-      <h1>I build the systems online communities run on.</h1>
-      <p class="hero__lede">
-        Backend services, desktop tooling, and the control panels that go on top.
-        Mostly for trucking companies, radio stations and game servers, where
-        there's usually someone online at three in the morning.
-      </p>
-      <div class="hero__actions">
-        <a class="btn btn--primary" href="#work">
-          See the work
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a class="btn btn--ghost" href="mailto:tomas.jorasen@polarixhosting.com">Get in touch</a>
-      </div>
-    </div>
+  <div class="hero__chips" aria-hidden="true">
+    <div class="chip chip--term glass"><em>$ status --all</em><br><span class="a">&#9679;</span> <b>northlanemp</b> &nbsp;building<br><span class="g">&#9679;</span> <b>nordan-hub</b> &nbsp;&nbsp;live<br><span class="g">&#9679;</span> <b>telemetry</b> &nbsp;&nbsp;&nbsp;in use</div>
+    <div class="chip chip--live glass"><span class="status">2 systems running</span></div>
+    <div class="chip chip--now glass"><span class="sign">01</span><span><b>NorthLaneMP</b><small>Next stop</small></span></div>
+  </div>
 
-    <div class="hero__showcase">
-      <div class="hero__stack">
-      <div class="hero__frame">
-        <img src="images/commandcenter.png" width="1646" height="980" fetchpriority="high" decoding="async" alt="The Nordan Command window: accent colour swatches, an opacity slider, on/off toggles for each HUD module, damage display modes, and controls for shift-light redline, speed units and temperature units.">
-      </div>
-      <div class="hero__chip">
-        <img src="images/overlay.png" width="1397" height="96" decoding="async" alt="The in-game overlay strip showing damage, water temperature, RPM, speed, gear, odometer and a segmented fuel bar.">
-      </div>
-      </div>
-      <p class="hero__visual-caption">Nordan VTC Telemetry &middot; config window and the overlay it draws</p>
+  <div class="wrap">
+    <span class="hero__pill"><span class="status">Open to new projects</span></span>
+    <p class="hero__hi">Hi, I'm</p>
+    <h1 class="hero__name">Tomas<span class="hero__lamp"></span></h1>
+    <p class="hero__role" data-roles="Backend developer|Game server developer|Desktop tool builder|Systems &amp; software engineer"><span>Systems &amp; software engineer</span></p>
+    <p class="hero__lede">
+      I build the systems online communities run on: backend services,
+      desktop tools and the control panels that go on top.
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#work">
+        View my work
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="#contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg>
+        Contact me
+      </a>
+    </div>
+    <div class="hero__meta">
+      <a class="icon-btn" href="https://github.com/ForgotToBuy" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.14c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.13v3.16c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a>
+      <span>Currently building NorthLaneMP</span>
     </div>
   </div>
+
 </header>
 
-<main id="work">
+<main id="main">
 
-  <section class="wrap section">
-    <div class="section__head">
-      <div class="section__title"><h2>Work</h2></div>
-      <p class="eyebrow">Five systems. Four running, one archived</p>
+  <section class="wrap section" id="about">
+    <div class="about">
+      <aside class="glance glass" data-reveal>
+        <div class="glance__ring"><span>T</span></div>
+        <h3 class="glance__name">Tomas</h3>
+        <p class="glance__role">Systems &amp; software engineer</p>
+        <dl>
+          <div><dt>Currently</dt><dd>Building NorthLaneMP</dd></div>
+          <div><dt>Focus</dt><dd>Backend, desktop tooling, security</dd></div>
+          <div><dt>Works in</dt><dd>C++, C#, Rust, Java, PHP / Laravel, Vue 3</dd></div>
+          <div><dt>GitHub</dt><dd><a href="https://github.com/ForgotToBuy" target="_blank" rel="noopener noreferrer">ForgotToBuy</a></dd></div>
+        </dl>
+      </aside>
+
+      <div class="about__text" data-reveal>
+        <div class="head">
+          <span class="head__kicker">About me</span>
+          <h2>I build what keeps communities <span class="aurora-text">online.</span></h2>
+        </div>
+        <p>
+          I build backend systems, desktop tools and the control panels that go
+          on top of them. Most of it is for online communities: a virtual
+          trucking company, a radio station, game servers. The kind of thing
+          somebody notices within minutes if it breaks.
+        </p>
+        <p>
+          Right now I'm building NorthLaneMP, a multiplayer server for Euro
+          Truck Simulator 2. Before that came the Nordan Transport hub and its
+          telemetry overlay, a self-hosted AI workstation, the core plugin for
+          the GlobalSMP Minecraft network, and the staff panel for SimNation
+          Radio. Those last three have since shut down, but the work is still here.
+        </p>
+        <p>
+          Every project here was built for a group I was already part of, so
+          when something breaks I hear about it from the person it broke for. I
+          check my own code for the things that actually get exploited, and
+          everything ships through a proper deploy path.
+        </p>
+        <ul class="chips">
+          <li>Trucking sims</li><li>Game servers</li><li>Online communities</li><li>Desktop tools</li><li>Security</li>
+        </ul>
+        <div class="stats">
+          <div class="stat glass"><b>6</b><span>Projects built</span></div>
+          <div class="stat glass"><b>2</b><span>Running now</span></div>
+          <div class="stat glass"><b>1</b><span>In the works</span></div>
+        </div>
+        <a class="btn btn--primary about__cta" href="#contact">
+          Get in touch
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
     </div>
+  </section>
 
-    <div class="projects">
+  <section class="wrap section" id="skills">
+    <div class="head" data-reveal>
+      <span class="head__kicker">Skills &amp; tools</span>
+      <h2>What I <span class="aurora-text">work in.</span></h2>
+      <p class="head__sub">The languages, frameworks and tools I use, and the projects I've used them in.</p>
+    </div>
+    <div class="skills">
+      <div class="skill glass" data-reveal>
+        <div class="skill__head">
+          <span class="skill__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></span>
+          <div><h3>Backend</h3><p>Servers, APIs and game plugins</p></div>
+          <span class="skill__no">01</span>
+        </div>
+        <div class="skill__grid">
+          <div class="tool" style="--dot: var(--green)"><b>PHP &amp; Laravel</b><small>Used in: Nordan Hub, MidNightAI, SimNation</small></div>
+          <div class="tool" style="--dot: var(--green)"><b>Java</b><small>Used in: GlobalSMP core plugin</small></div>
+          <div class="tool" style="--dot: var(--green)"><b>Paper API</b><small>Used in: GlobalSMP</small></div>
+          <div class="tool" style="--dot: var(--green)"><b>Velocity</b><small>Used in: GlobalSMP proxy network</small></div>
+          <div class="tool" style="--dot: var(--green)"><b>MySQL</b><small>Used in: GlobalSMP, Nordan Hub, MidNightAI</small></div>
+          <div class="tool" style="--dot: var(--green)"><b>REST APIs</b><small>Used in: Groq, AzuraCast, Trucky</small></div>
+          <div class="tool" style="--dot: var(--green)"><b>Node.js</b><small>Server-side JavaScript</small></div>
+          <div class="tool" style="--dot: var(--green)"><b>Discord bots</b><small>Bots for community servers</small></div>
+        </div>
+      </div>
+      <div class="skill glass" data-reveal>
+        <div class="skill__head">
+          <span class="skill__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>
+          <div><h3>Frontend</h3><p>Dashboards and app interfaces</p></div>
+          <span class="skill__no">02</span>
+        </div>
+        <div class="skill__grid">
+          <div class="tool" style="--dot: var(--cyan)"><b>Vue 3</b><small>Used in: Nordan Hub, Telemetry, MidNightAI, SimNation</small></div>
+          <div class="tool" style="--dot: var(--cyan)"><b>Inertia.js</b><small>Used in: Nordan Hub, MidNightAI, SimNation</small></div>
+          <div class="tool" style="--dot: var(--cyan)"><b>Tailwind CSS</b><small>Used in: MidNightAI, SimNation</small></div>
+          <div class="tool" style="--dot: var(--cyan)"><b>JavaScript</b><small>Used in: Every project</small></div>
+          <div class="tool" style="--dot: var(--cyan)"><b>TypeScript</b><small>Used in: Nordan VTC Telemetry</small></div>
+          <div class="tool" style="--dot: var(--cyan)"><b>Blade</b><small>Laravel page templates</small></div>
+          <div class="tool" style="--dot: var(--cyan)"><b>HTML &amp; CSS</b><small>Used in: Every website, including this one</small></div>
+        </div>
+      </div>
+      <div class="skill glass" data-reveal>
+        <div class="skill__head">
+          <span class="skill__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span>
+          <div><h3>Systems</h3><p>Desktop apps and low-level tooling</p></div>
+          <span class="skill__no">03</span>
+        </div>
+        <div class="skill__grid">
+          <div class="tool" style="--dot: var(--violet)"><b>Rust</b><small>Used in: Nordan VTC Telemetry</small></div>
+          <div class="tool" style="--dot: var(--violet)"><b>Tauri v2</b><small>Used in: Nordan VTC Telemetry</small></div>
+          <div class="tool" style="--dot: var(--violet)"><b>Win32 API</b><small>Used in: Shared memory and window flags</small></div>
+          <div class="tool" style="--dot: var(--violet)"><b>C#</b><small>Used in: NorthLaneMP</small></div>
+          <div class="tool" style="--dot: var(--violet)"><b>XAML</b><small>Windows app interfaces</small></div>
+          <div class="tool" style="--dot: var(--violet)"><b>C++</b><small>Used in: NorthLaneMP</small></div>
+        </div>
+      </div>
+      <div class="skill glass" data-reveal>
+        <div class="skill__head">
+          <span class="skill__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L11 20a2.1 2.1 0 0 1-3-3l8.5-8.5"/><path d="m14.5 6.5 3-3"/></svg></span>
+          <div><h3>Tools</h3><p>Shipping and keeping things safe</p></div>
+          <span class="skill__no">04</span>
+        </div>
+        <div class="skill__grid">
+          <div class="tool" style="--dot: var(--amber)"><b>Git &amp; GitHub</b><small>Used in: Every project</small></div>
+          <div class="tool" style="--dot: var(--amber)"><b>Webhook deploys</b><small>Used in: MidNightAI</small></div>
+          <div class="tool" style="--dot: var(--amber)"><b>Plesk</b><small>Used in: MidNightAI hosting</small></div>
+          <div class="tool" style="--dot: var(--amber)"><b>Laravel Fortify</b><small>Used in: Two-factor on MidNightAI</small></div>
+          <div class="tool" style="--dot: var(--amber)"><b>AzuraCast</b><small>Used in: SimNation Radio</small></div>
+          <div class="tool" style="--dot: var(--amber)"><b>Docker</b><small>Used in: NorthLaneMP</small></div>
+          <div class="tool" style="--dot: var(--amber)"><b>Linux &amp; Nginx</b><small>Used in: NorthLaneMP server setup</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <article class="project" data-reveal>
-        <div class="project__media project__media--diagram">
+  <section class="wrap section" id="work">
+    <div class="head head--center" data-reveal>
+      <span class="head__kicker">Selected work</span>
+      <h2>Things I've <span class="aurora-text">built.</span></h2>
+      <p class="head__sub">Game servers, web platforms and a desktop app, mostly for trucking-sim and gaming communities.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter" type="button" data-filter="game" aria-pressed="false">Game servers</button>
+      <button class="filter" type="button" data-filter="web" aria-pressed="false">Web</button>
+      <button class="filter" type="button" data-filter="desktop" aria-pressed="false">Desktop</button>
+    </div>
+    <div class="work">
+      <article class="work-card glass" data-cat="game" style="--accent: var(--amber)" data-reveal>
+        <a class="work-card__media" href="northlanemp.html" tabindex="-1" aria-hidden="true">
+          <span class="badge badge--type">Game server</span>
+          <span class="badge badge--state" style="--lamp: var(--amber)">Building</span>
+          <svg viewBox="0 0 560 350" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path id="convoyPath" class="convoy__edge" d="M-30 300C110 300 140 215 250 200S380 110 600 76"/><path class="convoy__road" d="M-30 300C110 300 140 215 250 200S380 110 600 76"/><path class="convoy__lane" d="M-30 300C110 300 140 215 250 200S380 110 600 76"/><rect class="convoy__truck" x="-9" y="-5" width="18" height="10" rx="3" fill="var(--green)" color="var(--green)"><animateMotion dur="11s" begin="0s" repeatCount="indefinite" rotate="auto"><mpath href="#convoyPath"/></animateMotion></rect><rect class="convoy__truck" x="-9" y="-5" width="18" height="10" rx="3" fill="var(--cyan)" color="var(--cyan)"><animateMotion dur="11s" begin="-1.5s" repeatCount="indefinite" rotate="auto"><mpath href="#convoyPath"/></animateMotion></rect><rect class="convoy__truck" x="-9" y="-5" width="18" height="10" rx="3" fill="var(--violet)" color="var(--violet)"><animateMotion dur="11s" begin="-3.1s" repeatCount="indefinite" rotate="auto"><mpath href="#convoyPath"/></animateMotion></rect><rect class="convoy__truck" x="-9" y="-5" width="18" height="10" rx="3" fill="var(--amber)" color="var(--amber)"><animateMotion dur="11s" begin="-4.4s" repeatCount="indefinite" rotate="auto"><mpath href="#convoyPath"/></animateMotion></rect><rect class="convoy__truck" x="-9" y="-5" width="18" height="10" rx="3" fill="#f1f5ff" color="#f1f5ff"><animateMotion dur="11s" begin="-6.2s" repeatCount="indefinite" rotate="auto"><mpath href="#convoyPath"/></animateMotion></rect><rect class="convoy__truck" x="-9" y="-5" width="18" height="10" rx="3" fill="var(--cyan)" color="var(--cyan)"><animateMotion dur="11s" begin="-8s" repeatCount="indefinite" rotate="auto"><mpath href="#convoyPath"/></animateMotion></rect></svg>
+        </a>
+        <div class="work-card__body">
+          <h3><a href="northlanemp.html">NorthLaneMP</a></h3>
+          <p>
+            A multiplayer server for Euro Truck Simulator 2, built with C++ and
+            C# and run with Docker on Linux. It's what I'm building right now,
+            and it'll get a full write-up as it takes shape.
+          </p>
+          <ul class="tags"><li>C++</li><li>C#</li><li>Docker</li><li>Linux</li></ul>
+          <div class="work-card__actions">
+            <a class="btn btn--primary btn--small" href="northlanemp.html">
+              Case study
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card glass" data-cat="web" style="--accent: var(--cyan)" data-reveal>
+        <a class="work-card__media" href="https://nordantransport.no/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <span class="badge badge--type">Web</span>
+          <span class="badge badge--state" style="--lamp: var(--green)">Live</span>
+          <img src="images/nordantransport.jpg" width="1600" height="636" loading="lazy" decoding="async" alt="The Nordan Transport homepage, showing two trucks parked at a depot behind the site's title and a join button.">
+        </a>
+        <div class="work-card__body">
+          <h3><a href="https://nordantransport.no/" target="_blank" rel="noopener noreferrer">Nordan Transport Hub</a></h3>
+          <p>
+            The hub Nordan Transport's drivers use day to day. Delivery
+            telemetry syncs in from Trucky Hub, management gets the analytics
+            side, and the whole thing is localised so it reads properly in more
+            than one language.
+          </p>
+          <ul class="tags"><li>Laravel</li><li>Vue 3</li><li>Inertia.js</li><li>MySQL</li></ul>
+          <div class="work-card__actions">
+            <a class="btn btn--ghost btn--small" href="https://nordantransport.no/" target="_blank" rel="noopener noreferrer">
+              Visit nordantransport.no
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card glass" data-cat="desktop" style="--accent: var(--cyan)" data-reveal>
+        <a class="work-card__media" href="nordanoverlay.html" tabindex="-1" aria-hidden="true">
+          <span class="badge badge--type">Desktop</span>
+          <span class="badge badge--state" style="--lamp: var(--green)">In use</span>
+          <img src="images/commandcenter.png" width="1646" height="980" loading="lazy" decoding="async" alt="The Nordan Command window, where each HUD module, colour and unit setting is configured.">
+        </a>
+        <div class="work-card__body">
+          <h3><a href="nordanoverlay.html">Nordan VTC Telemetry</a></h3>
+          <p>
+            A heads-up display that reads live physics data out of the game's
+            shared-memory file and draws it over the window. It shows up when
+            you start driving and goes away when you pause, so there's nothing
+            to manage while you're moving.
+          </p>
+          <ul class="tags"><li>Rust</li><li>Tauri v2</li><li>Vue 3</li><li>Win32 API</li></ul>
+          <div class="work-card__actions">
+            <a class="btn btn--ghost btn--small" href="nordanoverlay.html">
+              Case study
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card glass work-card--off" data-cat="web" style="--accent: var(--dim)" data-reveal>
+        <a class="work-card__media" href="midnight.html" tabindex="-1" aria-hidden="true">
+          <span class="badge badge--type">Web</span>
+          <span class="badge badge--state" style="--lamp: var(--dim)">Archived</span>
+          <img src="images/Midnight-ai.png" width="1883" height="856" loading="lazy" decoding="async" alt="The MidNightAI chat interface with a conversation in progress.">
+        </a>
+        <div class="work-card__body">
+          <h3><a href="midnight.html">MidNightAI</a></h3>
+          <p>
+            A chat workstation I ran on my own infrastructure, wired to Groq's
+            LPU inference so responses came back fast. Two-factor on accounts,
+            conversation history in MySQL, and answers rendered as real Markdown
+            rather than a wall of asterisks. It's no longer running.
+          </p>
+          <ul class="tags"><li>Laravel 11</li><li>Vue 3</li><li>Groq API</li><li>MySQL</li></ul>
+          <div class="work-card__actions">
+            <a class="btn btn--ghost btn--small" href="midnight.html">
+              Case study
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card glass work-card--off" data-cat="game" style="--accent: var(--dim)" data-reveal>
+        <a class="work-card__media" href="globalsmp.html" tabindex="-1" aria-hidden="true">
+          <span class="badge badge--type">Game server</span>
+          <span class="badge badge--state" style="--lamp: var(--dim)">Archived</span>
           <svg class="topology" viewBox="0 0 320 226" role="img" aria-label="Diagram: players connect through a Velocity proxy to three Paper servers, which share one MySQL database.">
             <text class="label label--dim" x="160" y="14" text-anchor="middle">PLAYERS</text>
             <path class="wire" d="M160 22 V40"/>
@@ -120,245 +350,172 @@
             <rect class="node" x="20" y="178" width="280" height="34" rx="6"/>
             <text class="label label--dim" x="160" y="200" text-anchor="middle">MYSQL</text>
           </svg>
-        </div>
-        <div class="project__body">
-          <div class="project__head">
-          <span class="status">Building</span>
-          <h3 class="project__title"><a href="globalsmp.html">GlobalSMP</a></h3>
-          <p class="project__kicker">Minecraft server network &middot; Lead developer</p>
-          </div>
-          <div class="project__detail">
-            <p class="project__text">
-            A multi-server Minecraft network running behind a Velocity proxy. I'm
-            lead developer on the core plugin: the Paper-side layer every server
-            loads, so a player's data stays consistent in MySQL when they move
-            between servers.
-          </p>
-          <ul class="tags">
-            <li>Java</li><li>Paper API</li><li>Velocity</li><li>MySQL</li>
-          </ul>
-          <div class="project__actions">
-            <a class="btn btn--ghost" href="globalsmp.html">
-              Read the case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="project" data-reveal>
-        <div class="project__media">
-          <img src="images/nordantransport.jpg" width="1600" height="636" loading="lazy" decoding="async" alt="The Nordan Transport homepage, showing two trucks parked at a depot behind the site's title and a join button.">
-        </div>
-        <div class="project__body">
-          <div class="project__head">
-          <span class="status">Live</span>
-          <h3 class="project__title">
-            <a href="https://nordantransport.no/" target="_blank" rel="noopener noreferrer">Nordan Transport Hub</a>
-          </h3>
-          <p class="project__kicker">Community platform &middot; Virtual trucking company</p>
-          </div>
-          <div class="project__detail">
-            <p class="project__text">
-            The hub Nordan Transport's drivers use day to day. Delivery telemetry
-            syncs in from Trucky Hub, management gets the analytics side, and the
-            whole thing is localised so it reads properly in more than one
-            language.
-          </p>
-          <ul class="tags">
-            <li>Laravel</li><li>Vue 3</li><li>Inertia.js</li><li>MySQL</li>
-          </ul>
-          <div class="project__actions">
-            <a class="btn btn--ghost" href="https://nordantransport.no/" target="_blank" rel="noopener noreferrer">
-              Visit nordantransport.no
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="project" data-reveal>
-        <div class="project__media">
-          <img src="images/commandcenter.png" width="1646" height="980" loading="lazy" decoding="async" alt="The Nordan Command window, where each HUD module, colour and unit setting is configured.">
-        </div>
-        <div class="project__body">
-          <div class="project__head">
-          <span class="status">In use</span>
-          <h3 class="project__title"><a href="nordanoverlay.html">Nordan VTC Telemetry</a></h3>
-          <p class="project__kicker">Desktop app &middot; Euro Truck Simulator 2 &amp; American Truck Simulator</p>
-          </div>
-          <div class="project__detail">
-            <p class="project__text">
-            A heads-up display that reads live physics data out of the game's
-            shared-memory file and draws it over the window. It shows up when you
-            start driving and goes away when you pause, so there's nothing to
-            manage while you're moving.
-          </p>
-          <ul class="tags">
-            <li>Rust</li><li>Tauri v2</li><li>Vue 3</li><li>Win32 API</li>
-          </ul>
-          <div class="project__actions">
-            <a class="btn btn--ghost" href="nordanoverlay.html">
-              Read the case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="project" data-reveal>
-        <div class="project__media">
-          <img src="images/Midnight-ai.png" width="1883" height="856" loading="lazy" decoding="async" alt="The MidNightAI chat interface with a conversation in progress.">
-        </div>
-        <div class="project__body">
-          <div class="project__head">
-          <span class="status">Live</span>
-          <h3 class="project__title"><a href="midnight.html">MidNightAI</a></h3>
-          <p class="project__kicker">Self-hosted AI workstation</p>
-          </div>
-          <div class="project__detail">
-            <p class="project__text">
-            A chat workstation on my own infrastructure, wired to Groq's LPU
-            inference so responses come back fast. Two-factor on accounts,
-            conversation history in MySQL, and answers rendered as real Markdown
-            rather than a wall of asterisks.
-          </p>
-          <ul class="tags">
-            <li>Laravel 11</li><li>Vue 3</li><li>Groq API</li><li>MySQL</li>
-          </ul>
-          <div class="project__actions">
-            <a class="btn btn--ghost" href="midnight.html">
-              Read the case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="project project--off" data-reveal>
-        <div class="project__media">
-          <img src="images/staffdashboard.png" width="1810" height="894" loading="lazy" decoding="async" alt="The SimNation station overview, showing live listener counts, show totals and staff numbers.">
-        </div>
-        <div class="project__body">
-          <div class="project__head">
-          <span class="status status--off">Archived</span>
-          <h3 class="project__title"><a href="simnation.html">SimNation Radio</a></h3>
-          <p class="project__kicker">Broadcast scheduling dashboard &middot; The station has closed</p>
-          </div>
-          <div class="project__detail">
-            <p class="project__text">
-            The staff panel for a 24/7 online radio station: a week-long booking
-            grid backed by a date engine I wrote myself, plus presenter accounts,
-            recruitment, listener requests and a bug inbox. The station isn't
-            running any more, but the panel did its job while it was.
-          </p>
-          <ul class="tags">
-            <li>Laravel</li><li>Vue 3</li><li>Inertia.js</li><li>AzuraCast API</li>
-          </ul>
-          <div class="project__actions">
-            <a class="btn btn--ghost" href="simnation.html">
-              Read the case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="wrap section" id="stack">
-    <div class="section__head">
-      <div class="section__title"><h2>Stack</h2></div>
-      <p class="eyebrow">What I reach for, and what for</p>
-    </div>
-
-    <div class="stack">
-      <div class="stack__group" data-reveal>
-        <h3>Backend &amp; data</h3>
-        <ul>
-          <li>Laravel <span>application core</span></li>
-          <li>Java <span>Paper plugins</span></li>
-          <li>MySQL <span>persistence</span></li>
-          <li>REST APIs <span>Groq, AzuraCast, Trucky</span></li>
-        </ul>
-      </div>
-      <div class="stack__group" data-reveal>
-        <h3>Interface</h3>
-        <ul>
-          <li>Vue 3 <span>Composition API</span></li>
-          <li>Inertia.js <span>SPA, no API layer</span></li>
-          <li>Tailwind CSS <span>application UI</span></li>
-          <li>CSS <span>hand-written, like this page</span></li>
-        </ul>
-      </div>
-      <div class="stack__group" data-reveal>
-        <h3>Systems</h3>
-        <ul>
-          <li>Rust <span>telemetry, tooling</span></li>
-          <li>Tauri <span>desktop shell</span></li>
-          <li>Win32 API <span>shared memory</span></li>
-          <li>Velocity <span>proxy networking</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap section">
-    <div class="section__head">
-      <div class="section__title"><h2>How I work</h2></div>
-    </div>
-    <div class="cards cards--3">
-      <div class="card" data-reveal>
-        <span class="card__no">01</span>
-        <h3>I use what I build</h3>
-        <p>
-          Every project here was made for a group I was already part of. When
-          something breaks I hear about it from the person it broke for, usually
-          within the hour, which makes it fairly obvious what to fix first.
-        </p>
-      </div>
-      <div class="card" data-reveal>
-        <span class="card__no">02</span>
-        <h3>Security while it's cheap</h3>
-        <p>
-          I check my own code for the things that actually get exploited:
-          injection, request forgery, internal identifiers leaking into the DOM.
-          Much easier to handle while the code is still fresh in my head than to
-          retrofit six months later.
-        </p>
-      </div>
-      <div class="card" data-reveal>
-        <span class="card__no">03</span>
-        <h3>Real deployments</h3>
-        <p>
-          Everything goes out on a proper path. Push to GitHub, a webhook picks
-          it up, migrations run, assets compile. That costs a day to set up once
-          and saves a nervous manual deploy every time after.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap">
-    <div class="contact" data-reveal>
-      <p class="eyebrow"><span class="status">Available for work</span></p>
-      <h2>Got something that needs building?</h2>
-      <p class="prose">
-        I'm open to new projects. Backend work, desktop tooling, or picking up a
-        system that's outgrown whoever started it.
-      </p>
-      <div class="contact__actions">
-        <a class="btn btn--primary" href="mailto:tomas.jorasen@polarixhosting.com">
-          tomas.jorasen@polarixhosting.com
         </a>
-        <a class="btn btn--ghost" href="https://github.com/MiselTwister" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <div class="work-card__body">
+          <h3><a href="globalsmp.html">GlobalSMP</a></h3>
+          <p>
+            A multi-server Minecraft network that ran behind a Velocity proxy. I
+            was lead developer on the core plugin: the Paper-side layer every
+            server loaded, so a player's data stayed consistent in MySQL when
+            they moved between servers. The network has since shut down.
+          </p>
+          <ul class="tags"><li>Java</li><li>Paper API</li><li>Velocity</li><li>MySQL</li></ul>
+          <div class="work-card__actions">
+            <a class="btn btn--ghost btn--small" href="globalsmp.html">
+              Case study
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card glass work-card--off" data-cat="web" style="--accent: var(--dim)" data-reveal>
+        <a class="work-card__media" href="simnation.html" tabindex="-1" aria-hidden="true">
+          <span class="badge badge--type">Web</span>
+          <span class="badge badge--state" style="--lamp: var(--dim)">Archived</span>
+          <img src="images/staffdashboard.png" width="1810" height="894" loading="lazy" decoding="async" alt="The SimNation station overview, showing live listener counts, show totals and staff numbers.">
+        </a>
+        <div class="work-card__body">
+          <h3><a href="simnation.html">SimNation Radio</a></h3>
+          <p>
+            The staff panel for a 24/7 online radio station: a week-long booking
+            grid backed by a date engine I wrote myself, plus presenter
+            accounts, recruitment, listener requests and a bug inbox. The
+            station isn't running any more, but the panel did its job while it
+            was.
+          </p>
+          <ul class="tags"><li>Laravel</li><li>Vue 3</li><li>Inertia.js</li><li>AzuraCast API</li></ul>
+          <div class="work-card__actions">
+            <a class="btn btn--ghost btn--small" href="simnation.html">
+              Case study
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap section" id="route">
+    <div class="head head--center" data-reveal>
+      <span class="head__kicker">The route so far</span>
+      <h2>Stops along <span class="aurora-text">the way.</span></h2>
+      <p class="head__sub">What I've built and where each one stands today.</p>
+    </div>
+    <div class="route__track">
+      <div class="lane" aria-hidden="true"><div class="lane__fill"></div></div>
+      <article class="stop" data-reveal>
+        <span class="sign" aria-hidden="true">01</span>
+        <div class="stop__card glass">
+          <div class="stop__top"><span class="status status--build">Now</span></div>
+          <h3><a href="northlanemp.html">NorthLaneMP</a></h3>
+          <p class="stop__sub">Multiplayer server for ETS2</p>
+          <p>A multiplayer server for Euro Truck Simulator 2. What I'm building right now.</p>
+          <ul class="tags"><li>C++</li><li>C#</li><li>Docker</li></ul>
+        </div>
+      </article>
+
+      <article class="stop" data-reveal>
+        <span class="sign" aria-hidden="true">02</span>
+        <div class="stop__card glass">
+          <div class="stop__top"><span class="status">Live</span></div>
+          <h3><a href="https://nordantransport.no/" target="_blank" rel="noopener noreferrer">Nordan Transport Hub</a></h3>
+          <p class="stop__sub">Virtual trucking company</p>
+          <p>The community hub for a virtual trucking company, with delivery telemetry synced in from Trucky Hub.</p>
+          <ul class="tags"><li>Laravel</li><li>Vue 3</li><li>Inertia.js</li></ul>
+        </div>
+      </article>
+
+      <article class="stop" data-reveal>
+        <span class="sign" aria-hidden="true">03</span>
+        <div class="stop__card glass">
+          <div class="stop__top"><span class="status">In use</span></div>
+          <h3><a href="nordanoverlay.html">Nordan VTC Telemetry</a></h3>
+          <p class="stop__sub">Desktop app for ETS2 & ATS</p>
+          <p>A Rust and Tauri heads-up display that reads live game data and draws it over the window.</p>
+          <ul class="tags"><li>Rust</li><li>Tauri v2</li><li>Vue 3</li></ul>
+        </div>
+      </article>
+
+      <article class="stop stop--off" data-reveal>
+        <span class="sign sign--off" aria-hidden="true">04</span>
+        <div class="stop__card glass">
+          <div class="stop__top"><span class="status status--off">Archived</span></div>
+          <h3><a href="midnight.html">MidNightAI</a></h3>
+          <p class="stop__sub">Self-hosted AI workstation</p>
+          <p>A self-hosted chat workstation on Groq inference, with two-factor accounts and saved history. No longer running.</p>
+          <ul class="tags"><li>Laravel 11</li><li>Vue 3</li><li>Groq API</li></ul>
+        </div>
+      </article>
+
+      <article class="stop stop--off" data-reveal>
+        <span class="sign sign--off" aria-hidden="true">05</span>
+        <div class="stop__card glass">
+          <div class="stop__top"><span class="status status--off">Archived</span></div>
+          <h3><a href="globalsmp.html">GlobalSMP</a></h3>
+          <p class="stop__sub">Minecraft server network</p>
+          <p>Lead developer on the core plugin for a multi-server Minecraft network behind a Velocity proxy. The network has since shut down.</p>
+          <ul class="tags"><li>Java</li><li>Paper API</li><li>Velocity</li></ul>
+        </div>
+      </article>
+
+      <article class="stop stop--off" data-reveal>
+        <span class="sign sign--off" aria-hidden="true">06</span>
+        <div class="stop__card glass">
+          <div class="stop__top"><span class="status status--off">Archived</span></div>
+          <h3><a href="simnation.html">SimNation Radio</a></h3>
+          <p class="stop__sub">Online radio station</p>
+          <p>The staff panel and booking grid for a 24/7 online radio station. The station has since closed.</p>
+          <ul class="tags"><li>Laravel</li><li>Vue 3</li><li>Inertia.js</li></ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap section" id="contact">
+    <div class="head head--center" data-reveal>
+      <span class="head__kicker">Contact</span>
+      <h2>Got something that needs <span class="aurora-text">building?</span></h2>
+      <p class="head__sub">I'm open to new projects: backend work, desktop tools, or picking up a system that's outgrown whoever started it.</p>
+    </div>
+    <div class="reach">
+      <div class="reach__side" data-reveal>
+        <div class="reach__card glass">
+          <small>Email me directly</small>
+          <div class="reach__row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg>
+            <a href="mailto:tomas.jorasen@polarixhosting.com">tomas.jorasen@polarixhosting.com</a>
+            <button class="icon-btn" type="button" data-copy="tomas.jorasen@polarixhosting.com" aria-label="Copy email address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg></button>
+          </div>
+        </div>
+        <div class="reach__card glass">
+          <small>Find me online</small>
+          <div class="reach__row">
+            <svg style="color: var(--snow)" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.14c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.13v3.16c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            <a href="https://github.com/ForgotToBuy" target="_blank" rel="noopener noreferrer">github.com/ForgotToBuy</a>
+          </div>
+        </div>
+        <div class="reach__card glass">
+          <small>Working on now</small>
+          <div class="reach__row"><span class="sign">01</span><b>NorthLaneMP</b></div>
+          <p>A multiplayer server for Euro Truck Simulator 2.</p>
+        </div>
       </div>
+
+      <form class="form glass" data-mailto="tomas.jorasen@polarixhosting.com" action="mailto:tomas.jorasen@polarixhosting.com" method="post" enctype="text/plain" data-reveal>
+        <div class="form__two">
+          <label>Name<input type="text" name="name" autocomplete="name" placeholder="Your name" required></label>
+          <label>Subject<input type="text" name="subject" placeholder="What's it about?"></label>
+        </div>
+        <label>Message<textarea name="message" placeholder="Tell me about your project, timeline and goals..." required></textarea></label>
+        <div class="form__foot">
+          <small>This opens your email app with the message filled in.</small>
+          <button class="btn btn--primary" type="submit">
+            Send message
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/></svg>
+          </button>
+        </div>
+      </form>
     </div>
   </section>
 
@@ -366,8 +523,19 @@
 
 <footer class="site-footer">
   <div class="wrap site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="wordmark" href="#top">Tomas<span>.</span></a>
+      <p>Hand-written HTML, CSS and JavaScript. No frameworks.</p>
+    </div>
+    <div class="site-footer__links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#route">Route</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/ForgotToBuy" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
     <span>&copy; 2026 Tomas</span>
-    <a href="https://github.com/ForgotToBuy" target="_blank" rel="noopener noreferrer">GitHub</a>
   </div>
 </footer>
 
@@ -394,7 +562,7 @@
   </div>
 </aside>
 
-<script src="motion.js" defer onerror="document.documentElement.classList.remove('js')"></script>
+<script src="motion.js?v=7" defer onerror="document.documentElement.classList.remove('js')"></script>
 
 </body>
 </html>

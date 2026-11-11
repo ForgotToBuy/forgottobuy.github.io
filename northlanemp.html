@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.className+=' js';</script>
+
+<title>NorthLaneMP — multiplayer for ETS2 | Tomas</title>
+<meta name="description" content="NorthLaneMP is a multiplayer server for Euro Truck Simulator 2, currently in development.">
+<link rel="canonical" href="https://forgottobuy.github.io/northlanemp.html">
+<meta name="theme-color" content="#04060b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop stop-color='%233ef0b6'/%3E%3Cstop offset='.55' stop-color='%2338c6ff'/%3E%3Cstop offset='1' stop-color='%238f7dff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='16' fill='url(%23g)'/%3E%3Cpath d='M9 10h14v4h-5v9h-4v-9H9z' fill='%2304060b'/%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://forgottobuy.github.io/northlanemp.html">
+<meta property="og:title" content="NorthLaneMP — multiplayer for ETS2 | Tomas">
+<meta property="og:description" content="NorthLaneMP is a multiplayer server for Euro Truck Simulator 2, currently in development.">
+<meta property="og:image" content="https://forgottobuy.github.io/images/og-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://forgottobuy.github.io/images/og-preview.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css?v=7">
+</head>
+<body id="top">
+
+<div class="backdrop" aria-hidden="true"><i></i><i></i><i></i></div>
+<canvas class="stars" aria-hidden="true"></canvas>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="site-nav" aria-label="Main">
+  <div class="wrap site-nav__inner">
+    <a class="wordmark" href="index.html"><span class="wordmark__mark">T</span>Tomas<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#route">Route</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="btn btn--ghost btn--small" href="index.html#contact">Let's talk</a>
+    </div>
+  </div>
+</nav>
+
+<header class="wrap case-hero">
+  <span class="status status--build">Building now</span>
+  <h1><span class="aurora-text">NorthLaneMP</span></h1>
+  <p class="case-hero__lede">
+    A multiplayer server for Euro Truck Simulator 2, and the project I'm
+    spending my time on right now.
+  </p>
+
+  <dl class="facts">
+    <div class="facts__row">
+      <dt class="facts__key">Type</dt>
+      <dd class="facts__val">Multiplayer server for Euro Truck Simulator 2</dd>
+    </div>
+    <div class="facts__row">
+      <dt class="facts__key">Stack</dt>
+      <dd class="facts__val">C++, C#, Docker, Linux</dd>
+    </div>
+    <div class="facts__row">
+      <dt class="facts__key">Status</dt>
+      <dd class="facts__val">In development</dd>
+    </div>
+  </dl>
+</header>
+
+<main id="main">
+
+  <section class="wrap section">
+    <div class="section__head">
+      <div class="section__title"><h2>More on the way</h2></div>
+    </div>
+    <div class="prose">
+      <p>
+        NorthLaneMP is still early, so this page is short on purpose. As the
+        server takes shape I'll write up how it's built, what it runs on and
+        what it can do, with screenshots.
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="contact" data-reveal>
+      <span class="status">Available for work</span>
+      <h2>Want to follow along?</h2>
+      <p class="prose">
+        If you're curious about NorthLaneMP, or you've got something of your
+        own that needs building, get in touch.
+      </p>
+      <div class="contact__actions">
+        <a class="btn btn--primary" href="mailto:tomas.jorasen@polarixhosting.com">tomas.jorasen@polarixhosting.com</a>
+        <a class="btn btn--ghost" href="index.html#work">All work</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="wordmark" href="index.html">Tomas<span>.</span></a>
+      <p>Hand-written HTML, CSS and JavaScript. No frameworks.</p>
+    </div>
+    <div class="site-footer__links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#route">Route</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="https://github.com/ForgotToBuy" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+    <span>&copy; 2026 Tomas</span>
+  </div>
+</footer>
+
+<aside class="hud" id="siteHud" hidden>
+  <div class="hud__player" id="hudPlayer" data-hud="player" hidden></div>
+  <div class="hud__inner">
+    <span class="hud__brand"><span class="hud__lamp"></span><span>Site telemetry</span></span>
+    <button class="hud__now" data-hud="now" type="button" aria-expanded="false" aria-controls="hudPlayer" hidden>
+      <svg class="hud__note" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 3v12.5a3.5 3.5 0 1 1-2-3.16V6.6L10 8.4v9.1a3.5 3.5 0 1 1-2-3.16V5.6L21 3z"/></svg>
+      <span class="hud__track">
+        <span class="hud__title" data-hud="now-title"></span>
+        <span class="hud__by" data-hud="now-artist"></span>
+      </span>
+      <svg class="hud__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+    <div class="hud__bar" data-hud="bar" aria-hidden="true"></div>
+    <div class="hud__readouts" aria-hidden="true">
+      <div class="hud__cell hud__cell--primary"><span class="hud__val" data-hud="scroll">0</span><span class="hud__unit">% depth</span></div>
+      <div class="hud__cell"><span class="hud__key">FPS</span><span class="hud__val" data-hud="fps">--</span></div>
+      <div class="hud__cell hud__cell--session"><span class="hud__key">SES</span><span class="hud__val" data-hud="session">0:00</span></div>
+      <div class="hud__cell hud__cell--viewport"><span class="hud__key">VIEW</span><span class="hud__val" data-hud="viewport">--</span></div>
+    </div>
+    <button class="hud__close" type="button" data-hud-close aria-label="Hide the telemetry readout">&times;</button>
+  </div>
+</aside>
+
+<script src="motion.js?v=7" defer onerror="document.documentElement.classList.remove('js')"></script>
+
+</body>
+</html>
