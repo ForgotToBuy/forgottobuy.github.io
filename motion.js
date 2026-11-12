@@ -323,54 +323,103 @@
   }
 
   function stars() {
-    var canvas = document.querySelector('.stars');
-    if (!canvas || !canvas.getContext) return;
-    var ctx = canvas.getContext('2d');
+    var base = document.querySelector('.stars');
+    if (!base || !base.getContext) return;
     var tints = ['241,245,255', '241,245,255', '241,245,255', '62,240,182', '56,198,255', '143,125,255'];
-    var dots = [];
-    var w = 0, h = 0, raf = null;
-
-    function size() {
-      var dpr = Math.min(window.devicePixelRatio || 1, 2);
-      w = window.innerWidth; h = window.innerHeight;
-      canvas.width = w * dpr; canvas.height = h * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      var count = Math.round(Math.min(150, (w * h) / 11000));
-      dots = [];
-      for (var i = 0; i < count; i++) {
-        dots.push({
-          x: Math.random() * w, y: Math.random() * h,
-          r: Math.random() * 1.2 + 0.3,
-          vx: (Math.random() - 0.5) * 0.06, vy: -Math.random() * 0.07 - 0.01,
-          phase: Math.random() * 6.28, speed: Math.random() * 0.9 + 0.3,
-          tint: tints[(Math.random() * tints.length) | 0]
-        });
-      }
-    }
-
-    function draw(t) {
-      ctx.clearRect(0, 0, w, h);
-      for (var i = 0; i < dots.length; i++) {
-        var d = dots[i];
-        d.x += d.vx; d.y += d.vy;
-        if (d.y < -4) { d.y = h + 4; d.x = Math.random() * w; }
-        if (d.x < -4) d.x = w + 4; else if (d.x > w + 4) d.x = -4;
-        var a = 0.35 + 0.45 * Math.sin(d.phase + t * 0.001 * d.speed);
-        ctx.fillStyle = 'rgba(' + d.tint + ',' + a.toFixed(3) + ')';
-        ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, 6.2832); ctx.fill();
-      }
-    }
-
-    function loop(t) { draw(t); raf = requestAnimationFrame(loop); }
-
-    size();
-    window.addEventListener('resize', function () { size(); if (reduced) draw(0); }, { passive: true });
-    if (reduced) { draw(0); return; }
-    raf = requestAnimationFrame(loop);
-    document.addEventListener('visibilitychange', function () {
-      if (document.hidden) { cancelAnimationFrame(raf); raf = null; }
-      else if (!raf) raf = requestAnimationFrame(loop);
+    var layers = [base];
+    ['stars--a', 'stars--b'].forEach(function (name) {
+      var extra = document.createElement('canvas');
+      extra.className = 'stars ' + name;
+      extra.setAttribute('aria-hidden', 'true');
+      base.parentNode.insertBefore(extra, base.nextSibling);
+      layers.push(extra);
     });
+    var drawnW = 0, drawnH = 0, timer = null;
+
+    function paint() {
+      var w = window.innerWidth, h = window.innerHeight;
+      if (Math.abs(w - drawnW) < 80 && Math.abs(h - drawnH) < 160) return;
+      drawnW = w; drawnH = h;
+      var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      var total = Math.round(Math.min(170, (w * h) / 9500));
+      layers.forEach(function (canvas, n) {
+        var ctx = canvas.getContext('2d');
+        canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        var count = Math.round(total * (n === 0 ? 0.4 : 0.3));
+        for (var i = 0; i < count; i++) {
+          var alpha = n === 0 ? Math.random() * 0.35 + 0.2 : Math.random() * 0.5 + 0.4;
+          ctx.fillStyle = 'rgba(' + tints[(Math.random() * tints.length) | 0] + ',' + alpha.toFixed(2) + ')';
+          ctx.beginPath();
+          ctx.arc(Math.random() * w, Math.random() * h, Math.random() * 1.2 + 0.3, 0, 6.2832);
+          ctx.fill();
+        }
+      });
+    }
+
+    paint();
+    window.addEventListener('resize', function () {
+      clearTimeout(timer);
+      timer = setTimeout(paint, 250);
+    }, { passive: true });
+  }
+
+  var resting = false;
+  var restHooks = [];
+
+  function convoy() {
+    var svgs = [];
+    document.querySelectorAll('svg').forEach(function (svg) {
+      if (svg.querySelector('animateMotion') && svg.pauseAnimations) svgs.push(svg);
+    });
+    if (!svgs.length) return;
+    if (reduced || !('IntersectionObserver' in window)) {
+      if (reduced) svgs.forEach(function (svg) { svg.pauseAnimations(); });
+      return;
+    }
+    var visible = [];
+    function sync() {
+      svgs.forEach(function (svg) {
+        if (visible.indexOf(svg) !== -1 && !resting && !document.hidden) svg.unpauseAnimations();
+        else svg.pauseAnimations();
+      });
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var i = visible.indexOf(e.target);
+        if (e.isIntersecting && i === -1) visible.push(e.target);
+        if (!e.isIntersecting && i !== -1) visible.splice(i, 1);
+      });
+      sync();
+    }, { rootMargin: '80px' });
+    svgs.forEach(function (svg) { svg.pauseAnimations(); io.observe(svg); });
+    restHooks.push(sync);
+    document.addEventListener('visibilitychange', sync);
+  }
+
+  function rest() {
+    if (reduced) return;
+    var REST_MS = 20000;
+    var root = document.documentElement;
+    var timer = null;
+
+    function set(state) {
+      if (resting === state) return;
+      resting = state;
+      root.classList.toggle('is-resting', state);
+      restHooks.forEach(function (fn) { fn(); });
+    }
+    function active() {
+      set(false);
+      clearTimeout(timer);
+      timer = setTimeout(function () { set(true); }, REST_MS);
+    }
+
+    ['pointermove', 'pointerdown', 'keydown', 'wheel', 'touchstart'].forEach(function (name) {
+      window.addEventListener(name, active, { passive: true });
+    });
+    window.addEventListener('scroll', active, { passive: true });
+    active();
   }
 
   function roles() {
@@ -379,7 +428,7 @@
     var list = host.getAttribute('data-roles').split('|');
     var i = list.length - 1;
     setInterval(function () {
-      if (document.hidden) return;
+      if (document.hidden || resting) return;
       var current = host.querySelector('span:not(.is-leaving)');
       i = (i + 1) % list.length;
       var next = document.createElement('span');
@@ -458,7 +507,7 @@
     });
   }
 
-  function start() { reveal(); unfold(); spotlight(); tilt(); telemetry(); lane(); calm(); stars(); roles(); spy(); filters(); copy(); mail(); }
+  function start() { reveal(); unfold(); spotlight(); tilt(); telemetry(); lane(); calm(); stars(); roles(); spy(); filters(); copy(); mail(); convoy(); rest(); }
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', start);
